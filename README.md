@@ -242,7 +242,7 @@ For convenience of ViTPose+ pre-trained models inference, I add load_model.py
 from ViTPose.tools import load_model
 
 conf_path = '{config path}'  # download config file
-ckpt_path = '{ckpt   path}'  # download ckpt file
+ckpt_path = '{ckpt   path}'  # download and split ckpt file using above code(tools/model_split.py)
 model = load_model.load(conf_path, ckpt_path)
 model.eval()
 
