@@ -195,15 +195,13 @@ Using YOLOv3 human detector. Note the configs here are only for evaluation.
 
 > Applications of ViTAE Transformer include: [image classification](https://github.com/ViTAE-Transformer/ViTAE-Transformer/tree/main/Image-Classification) | [object detection](https://github.com/ViTAE-Transformer/ViTAE-Transformer/tree/main/Object-Detection) | [semantic segmentation](https://github.com/ViTAE-Transformer/ViTAE-Transformer/tree/main/Semantic-Segmentation) | [animal pose segmentation](https://github.com/ViTAE-Transformer/ViTAE-Transformer/tree/main/Animal-Pose-Estimation) | [remote sensing](https://github.com/ViTAE-Transformer/ViTAE-Transformer-Remote-Sensing) | [matting](https://github.com/ViTAE-Transformer/ViTAE-Transformer-Matting) | [VSA](https://github.com/ViTAE-Transformer/ViTAE-VSA) | [ViTDet](https://github.com/ViTAE-Transformer/ViTDet)
 
-## Usage
+## My Usage
 
-We use PyTorch 1.9.0 or NGC docker 21.06, and mmcv 1.3.9 for the experiments.
+I use PyTorch 1.9.0 and mmcv 1.3.9 for the experiments.
 ```bash
-git clone https://github.com/open-mmlab/mmcv.git
-cd mmcv
-git checkout v1.3.9
-MMCV_WITH_OPS=1 pip install -e .
-cd ..
+pip install openmim
+pip install mmcv==1.3.9
+
 git clone https://github.com/ViTAE-Transformer/ViTPose.git
 cd ViTPose
 pip install -v -e .
