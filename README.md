@@ -236,15 +236,39 @@ For ViTPose+ pre-trained models, please first re-organize the pre-trained weight
 python tools/model_split.py --source <Pretrained PATH>
 ```
 
+## Inference
+
+For ViTPose+ pre-trained models inference, I add load_model.py for convenience
+
+```bash
+from ViTPose.tools import load_model
+
+conf_path = '{config path}'  # download config file
+ckpt_path = '{ckpt   path}'  # download ckpt file
+model = load_model.load(conf_path, ckpt_path)
+model.eval()
+
+from mmpose.apis import inference_top_down_pose_model, vis_pose_result
+
+img_path = '{image load path}'
+output = inference_top_down_pose_model(model, img_path)
+res = vis_pose_result(model, img_path, output[0])
+
+from PIL import Image
+import numpy as np
+
+save_path = '{image save path}'
+res = res[:,:,::-1]  # bgr2rgb
+im = Image.fromarray(res)
+display(im)
+im.save(save_path)
+```
+
 ## Todo
 
 This repo current contains modifications including:
 
-- [x] Upload configs and pretrained models
-
-- [x] More models with SOTA results
-
-- [x] Upload multi-task training config
+- [x] Upload /tools/load_model.py for inference
 
 ## Acknowledge
 We acknowledge the excellent implementation from [mmpose](https://github.com/open-mmlab/mmdetection) and [MAE](https://github.com/facebookresearch/mae).
