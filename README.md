@@ -202,7 +202,7 @@ I use PyTorch 1.9.0 and mmcv 1.3.9 for the experiments.
 pip install openmim
 pip install mmcv==1.3.9
 
-git clone https://github.com/ViTAE-Transformer/ViTPose.git
+git clone https://github.com/i92run/ViTPose.git
 cd ViTPose
 pip install -v -e .
 ```
