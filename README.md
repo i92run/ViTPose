@@ -238,7 +238,7 @@ python tools/model_split.py --source <Pretrained PATH>
 
 ## Inference
 
-For ViTPose+ pre-trained models inference, I add load_model.py for convenience
+For convenience of ViTPose+ pre-trained models inference, I add load_model.py
 
 ```bash
 from ViTPose.tools import load_model
