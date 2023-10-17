@@ -5,7 +5,7 @@ import copy
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--source', type=str)
+    parser.add_argument('--source', type=str, default='vitpose+_small.pth')
     parser.add_argument('--target', type=str, default=None)
     args = parser.parse_args()
     return args
